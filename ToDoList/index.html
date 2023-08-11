@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icon.png"></h2>
+            <video class="vidio" autoplay loop muted>
+                <source src="mylivewallpapers.com-Miguel-OHara-Spider-Man-2099.mp4" type="video/mp4">
+            </video>
+            <div class="row">
+                <input type="text"  id="input-box" placeholder="Add Your Text">
+                <button onclick="addtask()">ADD</button>
+            </div>
+            <ul id="list-container">
+                <!--li class="checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li>--> 
+            </ul>
+        </div>
+        <div class="container">
+            <div class="CONTAINER">
+                <div class="clock">
+                 <span id="hrs">00</span>
+                 <span>:</span>
+                 <span id="min">00</span>
+                 <span>:</span>
+                 <span id="sec">00</span>
+                </div>
+            </div>
+    </div>
+    <script>
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+        
+        setInterval(()=>{
+            let curentTime = new Date();
+        
+
+        hrs.innerHTML = (curentTime.getHours()<10?"0":"") + curentTime.getHours();
+        min.innerHTML = (curentTime.getMinutes()<10?"0":"")+ curentTime.getMinutes();
+        sec.innerHTML = (curentTime.getSeconds()<10?"0":"")+ curentTime.getSeconds();
+        },1000)
+        
+      
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
